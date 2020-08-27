@@ -10,4 +10,5 @@ var sum = 0;
 for (var i = 0; i < input.length; i++) {
 input[i] += sum;
 sum = input[i];}
+return input;
 };
