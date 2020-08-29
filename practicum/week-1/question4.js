@@ -19,5 +19,6 @@ for (var i =0; i <= A.length; i++){
         }
     }
 }
-return count--;
+count -=1;
+return count;
 };
