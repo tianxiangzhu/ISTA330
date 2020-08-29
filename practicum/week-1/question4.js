@@ -14,10 +14,10 @@ var howManyCommon = function(A, B) {
 var count = 0;
 for (var i =0; i <= A.length; i++){
     for (var j =0; j <= B.length; j++){
-        if (A[i] == B[j]){
+        if (A[i] === B[j]){
             count ++;
         }
     }
 }
-return count;
+return count--;
 };
