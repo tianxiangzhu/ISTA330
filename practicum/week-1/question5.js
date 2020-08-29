@@ -12,7 +12,16 @@ output: 3
 */
 
 var minimalReduction = function(n) {
-
+var count = 0;
+var num1 =  n%4 ;
+count ++;
+var num2 = num1%3;
+count ++;
+while (num2 != 0){
+    num2 -= 1;
+    count ++;
+}
+return count;
 };
 
 console.log('hi');
