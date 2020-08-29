@@ -11,5 +11,5 @@ var num = input.length;
 if (num % 2 === 0){
     return (sortinput[num/2-1]+sortinput[num/2])/2
 }
-return sortinput[(num+1)/2];
+return sortinput[(num-1)/2];
 };
