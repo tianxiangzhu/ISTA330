@@ -13,12 +13,16 @@ output: 3
 
 var minimalReduction = function(n) {
 var count = 0;
-var num1 =  n/4 ;
-count ++;
-var num2 = num1/3;
-count ++;
-while (num2 != 0){
-    num2 -= 1;
+while (n > 0){
+    if (n % 4 === 0){
+        n = n / 4;
+    }
+    else if (n % 3 === 0){
+        n = n / 3;
+    }
+    else{
+        n -= 1;
+    }
     count ++;
 }
 return count;
