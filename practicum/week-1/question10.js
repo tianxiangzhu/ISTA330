@@ -18,5 +18,5 @@ for (var i =1;i<str.length; i++){
         min = parseInt(str[i]);
     }
 }
-return (max-min)
+return (max-min);
 };
