@@ -24,6 +24,5 @@ var PascalTriangle = function(n) {
       }
     }
   }
-  
   return result;
 };
