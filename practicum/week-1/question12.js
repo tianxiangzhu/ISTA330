@@ -25,10 +25,8 @@ for (var i = 0; i < input.length; i++){
   else if (input[i] == "b"){
     countb ++;
   }
-  if (counta == countb){
+  if (countb == counta){
     count ++;
-    counta = 0;
-    countb = 0;
   }
 }
 return count;
