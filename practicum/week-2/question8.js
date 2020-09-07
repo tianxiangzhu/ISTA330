@@ -15,7 +15,7 @@ output: 3
 var d_integer = function(input) {
 for (var i=0;i<input.length;i++){
     var count = 0;
-    for (var j=0;j<input.length;i++){
+    for (var j=0;j<input.length;j++){
         if(input[j] === input[i]){
             count ++;
         }
