@@ -16,5 +16,19 @@ output: [[-5, -4], [23, 24]]
 */
 
 var minPairs = function(input) {
-
+input.sort((a,b) => a-b);
+var min = 99999;
+var answer = [];
+for (var i=0;i<input.length;i++){
+    var diff = input[i+1] - input[i];
+    if (diff<min){
+        answer = [];
+        answer.push([input[i],input[i+1]]);
+        min = diff;
+    }
+    else if(min === diff){
+        answer.push([input[i],input[i+1]]);
+    } 
+}
+return answer;
 };
