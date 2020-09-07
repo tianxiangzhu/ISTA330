@@ -28,4 +28,3 @@ while (n > 0){
 return count;
 };
 
-console.log('hi');
