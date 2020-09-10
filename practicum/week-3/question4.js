@@ -19,5 +19,15 @@ Example:
 */
 
 var powerSet = function(input) {
-
-};
+var answer = [];
+answer.push([]);
+  for (var i=1;i<(1<<input.length);i++) {
+    var subset = [];
+    for (var j=0; j<input.length;j++)
+      if (i & (1<<j)){
+        subset.push(input[j]);
+      }
+    answer.push(subset);
+  }
+return answer;
+}; 
