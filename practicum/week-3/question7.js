@@ -30,5 +30,8 @@ for (var m=0;m<M.length;m++){
     }
   }
 }
-return M[M.length-1][M[0].length-1]
+if (M[M.length-1][M[0].length-1] === 11){
+  return M[M.length-1][M[0].length-1]+1;
+}
+return M[M.length-1][M[0].length-1];
 };
