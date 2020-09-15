@@ -13,5 +13,18 @@ output: [0,0,1,1,2,2]
 */
 
 var sortColors = function(input) {
-
+    var count = [0,0,0]
+    for (var n of input) {
+        count[n]++
+    }
+    for (var i in input) {
+        if (i < count[0]) {
+            input[i] = 0
+        } else if (i < count[0] + count[1]) {
+            input[i] = 1
+        } else {
+            input[i] = 2
+        }
+    }
+return input;
 };
