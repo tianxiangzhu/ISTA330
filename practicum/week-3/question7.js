@@ -17,5 +17,18 @@ output: 7
 */
 
 var minPath = function(M) {
-
+for (var m=0;m<M.length;m++){
+  for (var n=0;n<M[0].length;n++){
+    if (m>0 && n>0){
+      M[m][n] = Math.min(M[m][n]+M[m-1][n],M[m][n]+M[m][n-1])
+    }
+    else if(m>0){
+      M[m][n] = M[m][n]+M[m-1][n]  
+    }
+    else if(n>0){
+      M[m][n] = M[m][n]+M[m][n-1]    
+    }
+  }
+}
+return M[M.length-1][M[0].length-1]
 };
