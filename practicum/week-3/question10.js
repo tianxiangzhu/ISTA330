@@ -11,5 +11,15 @@ output: true
 */
 
 var isPalindrome = function(s) {
-
+if (s ===''){
+    return true;
+}
+s = s.toLowerCase();
+s = s.replace(/[^a-z\d]+/g, '');
+if (s===s.split('').reverse().join('')){
+    return true;
+}
+else{
+    return false;
+}
 };
