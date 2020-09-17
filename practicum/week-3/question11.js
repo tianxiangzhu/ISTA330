@@ -35,5 +35,48 @@ output: 4
 */
 
 var romanToInteger = function(s) {
-
+var map ={"I":1,"V":5,"X":10,"L":50,"C":100,"D":500,"M":1000};
+var intlist = [];
+var i = 0;
+while (i<s.length){
+    if (i == s.length-1){
+        intlist.push(s[i]);
+        i++;
+    }
+    else if(map[s[i]] < map[s[i+1]]){
+        intlist.push(s[i]+s[i+1]);
+        i = i+2;
+    }
+    else{
+        intlist.push(s[i]);
+        i++;
+    }
+}
+var answer = 0;
+for (var j=0;j<intlist.length;j++){
+    if (intlist[j].length==1){
+        answer+=map[intlist[j]];
+    }
+    else{
+        if (intlist[j] === "IV"){
+            answer+=4;
+        }
+        else if (intlist[j] === "IX"){
+            answer+=9;
+        }
+        else if (intlist[j] === "XL"){
+            answer+=40;
+        }
+        else if (intlist[j] === "XC"){
+            answer+=90;
+        }
+        else if (intlist[j] === "CD"){
+            answer+=400;
+        }
+        else if (intlist[j] === "CM"){
+            answer+=900;
+        }
+    }
+}
+return answer; 
 };
