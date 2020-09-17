@@ -11,5 +11,28 @@ Example:
 */
 
 var isCrossing = function(s) {
-
+var x=0,y=0;
+var path =[];
+path.push("00");
+for (var i=0;i<s.length;i++){
+    if (s[i]==="N"){
+        y+=1;
+    }
+    else if (s[i]==="S"){
+        y-=1;
+    }
+    else if (s[i]==="E"){
+        x+=1;
+    }
+    else {
+        x-=1;
+    }
+    var current = x.toString()+y.toString();
+    if (path.includes(current)){
+        return true;
+    }
+    else{
+        path.push(current);}
+}
+return false;
 };
