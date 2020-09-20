@@ -23,4 +23,3 @@ for (var i=0; i<input.length;i++){
 return answer;
 };
 
-console.log('hi');
