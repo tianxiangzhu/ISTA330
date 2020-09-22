@@ -51,6 +51,17 @@
              rose,
              waterlily
        ];
+       var target = document.getElementById("flowersDiv");
+       for(var i=0;i<4;i++){
+           target.innerHTML+="<img src='/Users/81928/Documents/GitHub/ISTA330/practicum/week-4/images/"+flowers[i].picture+"' alt='"+flowers[i].name+"'>";
+           target.innerHTML+=flowers[i].name;
+       };
+       target.innerHTML+="<br>";
+       for(var i=4;i<8;i++){
+           target.innerHTML+="<img src='/Users/81928/Documents/GitHub/ISTA330/practicum/week-4/images/"+flowers[i].picture+"' alt='"+flowers[i].name+"'>";
+           target.innerHTML+=flowers[i].name;
+        };
+
     </script>
 </body>
 </html>
