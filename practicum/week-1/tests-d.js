@@ -1,38 +1,38 @@
 
 const q1 = [{
-    input: [[5, 6, 0]],
-    output: [5, 11, 11]
+    input: [[5, 6, 1]],
+    output: [5, 11, 12]
 },
 {
-    input: [[42, -3, -39]],
-    output: [42, 39, 0]
+    input: [[43, -3, -39]],
+    output: [43, 40, 1]
 }];
 
 const q2 = [{
-    input: [[5, 6, 1], 5],
-    output: false
+    input: [[5, 6, 1], 6],
+    output: true
 },
 {
-    input: [[3, 5, 2], 8],
-    output: true
+    input: [[3, 5, 2], 6],
+    output: false
 }];
 
 const q3 = [{
-    input: [[5, 6, 7]],
-    output: 3
+    input: [[5, 6, 1]],
+    output: 1
 },
 {
-    input: [[3, 2, 1, 0]],
-    output: 0
+    input: [[3, 5, 2, 8]],
+    output: 4
 }];
 
 const q4 = [{
-    input: ['asDf', 'dsssaaF'],
-    output: 5
+    input: ['asDf', 'dsssaaFa'],
+    output: 6
 },
 {
-    input: ['tek', 'TTTERk'],
-    output: 1
+    input: ['te', 'TTTER'],
+    output: 0
 }];
 
 const q5 = [{
