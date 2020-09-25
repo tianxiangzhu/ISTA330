@@ -36,8 +36,8 @@ const q4 = [{
 }];
 
 const q5 = [{
-    input: [12],
-    output: 3
+    input: [13],
+    output: 4
 },
 {
     input: [19],
@@ -45,17 +45,17 @@ const q5 = [{
 }];
 
 const q6 = [{
-    input: [[1, 2, 2, 3, 4, 7, 9 ]],
-    output: 3
+    input: [[1, 2, 2, 8, 4, 7, 9 ]],
+    output: 8
 },
 {
-    input: [[1, 2, 3, 4, 5, 6, 7, 8]],
-    output: 4.5
+    input: [[1, 2, 3, 4, 6, 6, 7, 8]],
+    output: 5
 }];
 
 const q7 = [{
-    input: [[4, 3, 8, 0]],
-    output: 4
+    input: [[4, 3, 8, 1]],
+    output: 5
 },
 {
     input: [[1, 3, 4, 2, 6, 8, 5, 7]],
@@ -63,8 +63,8 @@ const q7 = [{
 }];
 
 const q8 = [{
-    input: [[23, 44, 12, 4]],
-    output: [1, 0, 1, 2]
+    input: [[23, 44, 12, 24]],
+    output: [2, 0, 2, 1]
 },
 {
     input: [[1, 3, 4, 2, 6, 8, 5, 7]],
@@ -72,8 +72,8 @@ const q8 = [{
 }];
 
 const q9 = [{
-    input: ['llheo', [2, 3, 0, 1, 4]],
-    output: 'hello'
+    input: ['singgreet', [8, 5, 6, 0, 7, 1, 2, 3, 4]],
+    output: 'greetings'
 },
 {
     input: ['emelwco', [1, 5, 6, 2, 0, 3, 4]],
@@ -81,8 +81,8 @@ const q9 = [{
 }];
 
 const q10 = [{
-    input: [472],
-    output: 5
+    input: [4729],
+    output: 7
 },
 {
     input: [87034],
@@ -90,8 +90,8 @@ const q10 = [{
 }];
 
 const q11 = [{
-    input: [[2, 5, 4, 2]],
-    output: [5, 5, 2, 2, 2, 2]
+    input: [[2, 5, 5, 2]],
+    output: [5, 5, 2, 2, 2, 2, 2]
 },
 {
     input: [[0, 8, 1, 3, 2, 7]],
@@ -103,8 +103,8 @@ const q12 = [{
     output: 4
 },
 {
-    input: ['aaababbb'],
-    output: 2
+    input: ['aaababbba'],
+    output: 3
 }];
 
 let result = [{
