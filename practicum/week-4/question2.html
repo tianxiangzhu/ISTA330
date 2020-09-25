@@ -83,8 +83,8 @@
         }
         let daffodil = new Flower('Daffodil', 'daffodil.png');
         let cherryblossom = new Flower('Cherry blossom', 'cherryblossom.png');
-        let lily = new Flower('Lily', 'lily.png');
-        let daisy = new Flower('Daisy', 'daisy.png');
+        let lily = new Flower('Lily', 'lily.jpg');
+        let daisy = new Flower('Daisy', 'daisy.jpg');
         let sunflower = new Flower('Sunflower', 'sunflower.png');
         let tulip = new Flower('Tulip', 'tulip.png');
         let rose = new Flower('Rose', 'rose.png');
@@ -101,15 +101,68 @@
             waterlily
         ];
        var target = document.getElementById("flowersDiv");
+
+       var context ="";
        for(var i=0;i<4;i++){
-           target.innerHTML+="<img src='/Users/81928/Documents/GitHub/ISTA330/practicum/week-4/images/"+flowers[i].picture+"' id='"+flowers[i].name+"'>";
-           target.innerHTML+=flowers[i].name;
+           context+="<td><figure><img src='images/"+flowers[i].picture+"' alt='"+flowers[i].name+"' id="+i+">";
+           context+="<figcaption>"+flowers[i].name+"</figcaption></figure></td>";
        };
-       target.innerHTML+="<br>";
-       for(var i=4;i<8;i++){
-           target.innerHTML+="<img src='/Users/81928/Documents/GitHub/ISTA330/practicum/week-4/images/"+flowers[i].picture+"' id='"+flowers[i].name+"'>";
-           target.innerHTML+=flowers[i].name;
+       context+="</tr><br><tr>";
+       for(var j=4;j<8;j++){
+           context+="<td><figure><img src='images/"+flowers[j].picture+"' alt='"+flowers[j].name+"' id="+j+">";
+           context+="<figcaption>"+flowers[j].name+"</figcaption></figure></td>";
         };
+        context+="</tr>";
+        target.innerHTML="<table>"+context+"</table>";
+        for(var x=0;x<8;x++){
+            document.getElementById(x).addEventListener("click", function(){
+                reorder(this.id, flowers, target);
+            }, false);
+        }
+
+        function reorder(input, flowers){
+            var x = parseInt(input);
+            var current = flowers[x];
+            var ntarget = document.getElementById("flowersDiv");
+            flowers.sort(compare);
+            for(var check =0;check<8;check++){
+                if (current == flowers[check]){
+                    var start = check; 
+                }
+            }
+            var context ="";
+            for(var i=0;i<4;i++){
+                var a = i+start;
+                if (a>7){
+                    a=a-8;
+                }
+                context+="<td><figure><img src='images/"+flowers[a].picture+"' alt='"+flowers[a].name+"' id="+i+">";
+                context+="<figcaption>"+flowers[a].name+"</figcaption></figure></td>";
+            };
+            context+="</tr><br><tr>";
+            for(var j=4;j<8;j++){
+                var b = j+start;
+                if (b>7){
+                    b=b-8;
+                }              
+                context+="<td><figure><img src='images/"+flowers[b].picture+"' alt='"+flowers[b].name+"' id="+j+">";
+                context+="<figcaption>"+flowers[b].name+"</figcaption></figure></td>";
+            };
+            context+="</tr>";
+            ntarget.innerHTML="<table>"+context+"</table>";
+
+            };
+
+        function compare(a,b){
+            var namea=a.name;
+            var nameb=b.name;
+            if(namea>nameb){
+                return 1;
+            }
+            else if (nameb>namea){
+                return -1;
+            }
+        }
     </script>
 </body>
 
