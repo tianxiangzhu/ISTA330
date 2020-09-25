@@ -1,7 +1,7 @@
 // howManyTeams
 const q1 = [{
     input: [[2,5,3,4,1,6]],
-    output: 4
+    output: 5
 },
 {
     input: [[2,1,3]],
