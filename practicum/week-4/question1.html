@@ -52,17 +52,18 @@
              waterlily
        ];
        var target = document.getElementById("flowersDiv");
-       target.innerHTML+="<table><tr>"
+       var context ="";
        for(var i=0;i<4;i++){
-           target.innerHTML+="<td><figure><img src='/Users/81928/Documents/GitHub/ISTA330/practicum/week-4/images/"+flowers[i].picture+"' alt='"+flowers[i].name+"'>";
-           target.innerHTML+="<figcaption>"+flowers[i].name+"</figcaption></figure></td>";
+           context+="<td><figure><img src='/Users/81928/Documents/GitHub/ISTA330/practicum/week-4/images/"+flowers[i].picture+"' alt='"+flowers[i].name+"'>";
+           context+="<figcaption>"+flowers[i].name+"</figcaption></figure></td>";
        };
-       target.innerHTML+="</table><br>";
-       for(var i=4;i<8;i++){
-           target.innerHTML+="<img src='/Users/81928/Documents/GitHub/ISTA330/practicum/week-4/images/"+flowers[i].picture+"' alt='"+flowers[i].name+"'>";
-           target.innerHTML+=flowers[i].name;
+       context+="</tr><br><tr>";
+       for(var j=4;j<8;j++){
+           context+="<td><figure><img src='/Users/81928/Documents/GitHub/ISTA330/practicum/week-4/images/"+flowers[j].picture+"' alt='"+flowers[j].name+"'>";
+           context+="<figcaption>"+flowers[j].name+"</figcaption></figure></td>";
         };
-
+        context+="</tr>";
+        target.innerHTML="<table>"+context+"</table>";
     </script>
 </body>
 </html>
