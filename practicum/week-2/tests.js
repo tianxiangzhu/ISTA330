@@ -86,7 +86,7 @@ const q8 = [{
 //largestGroupsCount
 const q9 = [{
     input: [12],
-    output: 2
+    output: 3
 },
 {
     input: [24],
