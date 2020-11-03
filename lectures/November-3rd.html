@@ -9,6 +9,10 @@
     <div id='weather'>
 
     </div>
+    <br />
+    <div id='stock'>
+
+    </div>
     <script>
         let apiKey = '8e1efd6f4c0a30dffb92d128a502c521';
         let city = 'Tucson';
@@ -20,8 +24,19 @@
             let div = document.getElementById('weather');
             div.innerHTML = `<div>${state}, ${city}</div> 
                              <div>${weatherData.weather[0].description}</div>
-                             <div>${weatherData.main.temp}<sup>&deg;F</sup></div>`;
+                             <div>${Math.round(weatherData.main.temp)}<sup>&deg;F</sup></div>`;
         }
+        let company = 'IBM';
+        let stockapiKey = '7I87R5HSKAK2MXL2';
+        let stock = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${company}&apikey=${stockapiKey}`;
+        fetch(stock).then(x => x.json()).then(data => dispalyStock(data));
+        let dispalyStock = (stockData) => {
+             let div = document.getElementById('stock');             
+             for(let key in stockData["Meta Data"]) {
+                 div.innerHTML += `<div>${key}: ${stockData["Meta Data"][key]}</div>`;
+             }
+             
+        };
     </script>
 </body>
 </html>
