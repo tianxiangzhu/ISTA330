@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='weather'>
+
+    </div>
+    <script>
+        let apiKey = '8e1efd6f4c0a30dffb92d128a502c521';
+        let city = 'Tucson';
+        let state = 'Arizona';
+        let apibase = 'https://api.openweathermap.org/data/2.5';
+        let weatherAPI = apibase + `/weather?q=${city},${state}&appid=${apiKey}&units=imperial`;
+        fetch(weatherAPI).then(x => x.json()).then(data => display(data));
+        let display = (weatherData) => {
+            let div = document.getElementById('weather');
+            div.innerHTML = `<div>${state}, ${city}</div> 
+                             <div>${weatherData.weather[0].description}</div>
+                             <div>${weatherData.main.temp}<sup>&deg;F</sup></div>`;
+        }
+    </script>
+</body>
+</html>
